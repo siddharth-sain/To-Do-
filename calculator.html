@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="inputBox" value="" placeholder="0">
+        </div>
+        <div class="row">
+            <button type="button" class="opr" onclick="inputBox.value=''">AC</button>
+            <button type="button" class="opr" onclick="inputBox.value=inputBox.value.slice(0,-1)">DEL</button>
+            <button type="button" class="opr" onclick="inputBox.value+='%'">%</button>
+            <button type="button" class="opr" onclick="inputBox.value+='/'">/</button>
+        </div>
+        <div class="row">
+            <button type="button" onclick="inputBox.value+='7'">7</button>
+            <button type="button" onclick="inputBox.value+='8'">8</button>
+            <button type="button" onclick="inputBox.value+='9'">9</button>
+            <button type="button" class="opr" onclick="inputBox.value+='*'">*</button>
+        </div>
+        <div class="row">
+            <button type="button" onclick="inputBox.value+='4'">4</button>
+            <button type="button" onclick="inputBox.value+='5'">5</button>
+            <button type="button" onclick="inputBox.value+='6'">6</button>
+            <button type="button" class="opr" onclick="inputBox.value+='+'">+</button>
+        </div>
+        <div class="row">
+            <button type="button" onclick="inputBox.value+='1'">1</button>
+            <button type="button" onclick="inputBox.value+='2'">2</button>
+            <button type="button" onclick="inputBox.value+='3'">3</button>
+            <button type="button" class="opr" onclick="inputBox.value+='-'">-</button>
+        </div>
+        <div class="row">
+            <button type="button" id="plusMinus" onclick="inputBox.value+='&#xB1'">&#xB1</button>
+            <button type="button" onclick="inputBox.value+='0'">0</button>
+            <button type="button" onclick="inputBox.value+='.'">.</button>
+            <button type="button" id="eqBtn" onclick="inputBox.value=eval(inputBox.value)">=</button>
+        </div>
+    </div>
+</body>
+
+</html>
